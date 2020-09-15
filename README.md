@@ -1,5 +1,5 @@
 # go-raml
-[![Build Status](https://travis-ci.org/Jumpscale/go-raml.svg?branch=master)](https://travis-ci.org/Jumpscale/go-raml)
+[![Build Status](https://travis-ci.org/watercraft/go-raml.svg?branch=master)](https://travis-ci.org/watercraft/go-raml)
 
 
 Table of Contents
@@ -30,9 +30,9 @@ Table of Contents
 
 ## planning
 
-- [kanban for 9.3.0 (includes jumpscale as well)](https://waffle.io/Jumpscale/home?milestone=9.3.0)
-- [kanban for 9.3.1 (includes jumpscale as well)](https://waffle.io/Jumpscale/home?milestone=9.3.1)
-- [kanban for 9.4.0 (includes jumpscale as well)](https://waffle.io/Jumpscale/home?milestone=9.4.0)
+- [kanban for 9.3.0 (includes jumpscale as well)](https://waffle.io/watercraft/home?milestone=9.3.0)
+- [kanban for 9.3.1 (includes jumpscale as well)](https://waffle.io/watercraft/home?milestone=9.3.1)
+- [kanban for 9.4.0 (includes jumpscale as well)](https://waffle.io/watercraft/home?milestone=9.4.0)
 
 ## What is go-raml
 
@@ -63,7 +63,7 @@ Currently there are still some [limitations](docs/limitations.md) on the RAML 1.
 
 make sure you have at least go 1.8 installed !
 
-`go get -u github.com/Jumpscale/go-raml`
+`go get -u github.com/watercraft/go-raml`
 
 
 ### Build in development
@@ -79,13 +79,13 @@ Install go-bindata, we need it to compile all resource files to .go file
 
 To rebuild APIDocs files to .go file
 ```
-cd $GOPATH/src/github.com/Jumpscale/go-raml
+cd $GOPATH/src/github.com/watercraft/go-raml
 sh build_apidocs.sh
 ```
 
 Build go-raml and all resource files
 ```
-cd $GOPATH/src/github.com/Jumpscale/go-raml
+cd $GOPATH/src/github.com/watercraft/go-raml
 make install
 ```
 
