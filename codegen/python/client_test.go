@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Jumpscale/go-raml/raml"
-	"github.com/Jumpscale/go-raml/utils"
-	log "github.com/Sirupsen/logrus"
+	"github.com/watercraft/go-raml/raml"
+	"github.com/watercraft/go-raml/utils"
+	log "github.com/sirupsen/logrus"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

@@ -3,10 +3,10 @@ package commands
 import (
 	"strings"
 
-	"github.com/Jumpscale/go-raml/codegen"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen"
+	"github.com/watercraft/go-raml/raml"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 )
 
 //ClientCommand is executed to generate client from a RAML specification

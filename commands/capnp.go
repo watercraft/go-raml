@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
-	"github.com/Jumpscale/go-raml/codegen"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen"
+	"github.com/watercraft/go-raml/raml"
 )
 
 // CapnpCommand is executed to generate capnpm model from RAML specification

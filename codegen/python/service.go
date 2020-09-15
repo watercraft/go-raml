@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"sort"
 
-	"github.com/Jumpscale/go-raml/codegen/commons"
-	"github.com/Jumpscale/go-raml/codegen/resource"
+	"github.com/watercraft/go-raml/codegen/commons"
+	"github.com/watercraft/go-raml/codegen/resource"
 )
 
 type service struct {

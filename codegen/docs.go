@@ -2,7 +2,7 @@ package codegen
 
 import (
 	"fmt"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/raml"
 )
 
 const (

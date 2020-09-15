@@ -4,10 +4,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Jumpscale/go-raml/codegen/capnp"
-	"github.com/Jumpscale/go-raml/codegen/commons"
-	"github.com/Jumpscale/go-raml/codegen/types"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen/capnp"
+	"github.com/watercraft/go-raml/codegen/commons"
+	"github.com/watercraft/go-raml/codegen/types"
+	"github.com/watercraft/go-raml/raml"
 	"github.com/pinzolo/casee"
 )
 

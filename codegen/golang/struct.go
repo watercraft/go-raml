@@ -4,9 +4,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Jumpscale/go-raml/codegen/commons"
-	"github.com/Jumpscale/go-raml/codegen/types"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen/commons"
+	"github.com/watercraft/go-raml/codegen/types"
+	"github.com/watercraft/go-raml/raml"
 )
 
 const (
@@ -126,7 +126,7 @@ func (sd structDef) Imports() []string {
 		ip[`"fmt"`] = struct{}{}
 	}
 	if sd.OneLineDef == "" {
-		ip[`"gopkg.in/validator.v2"`] = struct{}{}
+		ip[`"github.com/watercraft/validator"`] = struct{}{}
 	}
 
 	// libraries

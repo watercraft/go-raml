@@ -1,10 +1,10 @@
 package python
 
 import (
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
-	"github.com/Jumpscale/go-raml/codegen/generator"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen/generator"
+	"github.com/watercraft/go-raml/raml"
 )
 
 var (

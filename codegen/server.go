@@ -4,15 +4,15 @@ import (
 	"errors"
 	"path/filepath"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
-	"github.com/Jumpscale/go-raml/codegen/apidocs"
-	"github.com/Jumpscale/go-raml/codegen/generator"
-	"github.com/Jumpscale/go-raml/codegen/golang"
-	"github.com/Jumpscale/go-raml/codegen/nim"
-	"github.com/Jumpscale/go-raml/codegen/python"
-	"github.com/Jumpscale/go-raml/codegen/tarantool"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen/apidocs"
+	"github.com/watercraft/go-raml/codegen/generator"
+	"github.com/watercraft/go-raml/codegen/golang"
+	"github.com/watercraft/go-raml/codegen/nim"
+	"github.com/watercraft/go-raml/codegen/python"
+	"github.com/watercraft/go-raml/codegen/tarantool"
+	"github.com/watercraft/go-raml/raml"
 )
 
 var (

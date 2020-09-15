@@ -8,8 +8,8 @@ import (
 
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/Jumpscale/go-raml/raml"
-	"github.com/Jumpscale/go-raml/utils"
+	"github.com/watercraft/go-raml/raml"
+	"github.com/watercraft/go-raml/utils"
 )
 
 // TODO FIXME : it disabled because this test is failed and WTF support is planned to be removed
@@ -22,7 +22,7 @@ func testLibrary(t *testing.T) {
 		err = raml.ParseFile("../fixtures/libraries/api.raml", apiDef)
 		So(err, ShouldBeNil)
 
-		libRootURLs := []string{"https://raw.githubusercontent.com/Jumpscale/go-raml/master/codegen/fixtures/libraries"}
+		libRootURLs := []string{"https://raw.githubusercontent.com/watercraft/go-raml/master/codegen/fixtures/libraries"}
 		server := NewFlaskServer(apiDef, "apidocs", targetDir, true, libRootURLs, false)
 		err = server.Generate()
 		So(err, ShouldBeNil)

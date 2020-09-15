@@ -1,10 +1,10 @@
 package commands
 
 import (
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
-	"github.com/Jumpscale/go-raml/codegen"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen"
+	"github.com/watercraft/go-raml/raml"
 )
 
 // PythonCapnp is executed to generate python class with capnp loader from RAML specification

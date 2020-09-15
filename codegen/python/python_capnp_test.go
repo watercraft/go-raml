@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"fmt"
-	"github.com/Jumpscale/go-raml/raml"
-	"github.com/Jumpscale/go-raml/utils"
+	"github.com/watercraft/go-raml/raml"
+	"github.com/watercraft/go-raml/utils"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

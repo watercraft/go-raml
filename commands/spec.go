@@ -1,6 +1,6 @@
 package commands
 
-import log "github.com/Sirupsen/logrus"
+import log "github.com/sirupsen/logrus"
 
 //SpecCommand is executed to generate a RAML specification from a go server
 type SpecCommand struct{}

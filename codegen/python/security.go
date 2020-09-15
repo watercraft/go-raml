@@ -5,9 +5,9 @@ import (
 
 	"path/filepath"
 
-	"github.com/Jumpscale/go-raml/codegen/commons"
-	"github.com/Jumpscale/go-raml/codegen/security"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen/commons"
+	"github.com/watercraft/go-raml/codegen/security"
+	"github.com/watercraft/go-raml/raml"
 )
 
 const (

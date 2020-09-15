@@ -8,7 +8,7 @@ import (
 	//"examples.com/ramlcode/goraml"
 
 	"github.com/gorilla/mux"
-	//"gopkg.in/validator.v2"
+	//"github.com/watercraft/validator"
 )
 
 func main() {

@@ -2,7 +2,7 @@
 package types
 
 import (
-	"gopkg.in/validator.v2"
+	"github.com/watercraft/validator"
 )
 
 type User struct {

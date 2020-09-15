@@ -3,9 +3,9 @@ package commands
 import (
 	"strings"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
-	"github.com/Jumpscale/go-raml/codegen"
+	"github.com/watercraft/go-raml/codegen"
 )
 
 // ServerCommand is executed to generate a go server from a RAML specification

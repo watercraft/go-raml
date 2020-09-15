@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Jumpscale/go-raml/codegen/commons"
-	"github.com/Jumpscale/go-raml/codegen/libraries"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen/commons"
+	"github.com/watercraft/go-raml/codegen/libraries"
+	"github.com/watercraft/go-raml/raml"
 )
 
 // library defines an RAML library

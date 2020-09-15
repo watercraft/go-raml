@@ -1,7 +1,7 @@
 package resource
 
 import (
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/raml"
 )
 
 const (

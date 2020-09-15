@@ -12,10 +12,10 @@ import (
 	"text/template"
 	"unicode"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
-	"github.com/Jumpscale/go-raml/codegen/templates"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen/templates"
+	"github.com/watercraft/go-raml/raml"
 )
 
 var (

@@ -1,10 +1,10 @@
 package codegen
 
 import (
-	"github.com/Jumpscale/go-raml/codegen/golang"
-	"github.com/Jumpscale/go-raml/codegen/nim"
-	"github.com/Jumpscale/go-raml/codegen/python"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen/golang"
+	"github.com/watercraft/go-raml/codegen/nim"
+	"github.com/watercraft/go-raml/codegen/python"
+	"github.com/watercraft/go-raml/raml"
 )
 
 // ClientConfig represents client's config

@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Jumpscale/go-raml/utils"
+	"github.com/watercraft/go-raml/utils"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

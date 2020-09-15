@@ -3,7 +3,7 @@ package nim
 import (
 	"path/filepath"
 
-	"github.com/Jumpscale/go-raml/codegen/commons"
+	"github.com/watercraft/go-raml/codegen/commons"
 )
 
 type clientService struct {

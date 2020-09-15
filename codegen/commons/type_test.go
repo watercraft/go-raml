@@ -5,7 +5,7 @@ import (
 
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/raml"
 )
 
 func TestCheckDuplicatedTitleTypes(t *testing.T) {

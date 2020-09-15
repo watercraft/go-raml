@@ -6,15 +6,15 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Jumpscale/go-raml/raml"
-	"github.com/Jumpscale/go-raml/utils"
+	"github.com/watercraft/go-raml/raml"
+	"github.com/watercraft/go-raml/utils"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
 var (
 	testLibRootURLs = []string{
-		"https://raw.githubusercontent.com/Jumpscale/go-raml/master/codegen/fixtures/libraries",
-		"https://raw.githubusercontent.com/Jumpscale/go-raml/libraries-in-file/codegen/fixtures/libraries/",
+		"https://raw.githubusercontent.com/watercraft/go-raml/master/codegen/fixtures/libraries",
+		"https://raw.githubusercontent.com/watercraft/go-raml/libraries-in-file/codegen/fixtures/libraries/",
 	}
 )
 

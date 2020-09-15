@@ -1,9 +1,9 @@
 package capnp
 
 import (
-	"github.com/Jumpscale/go-raml/codegen/commons"
-	"github.com/Jumpscale/go-raml/codegen/types"
-	"github.com/Jumpscale/go-raml/raml"
+	"github.com/watercraft/go-raml/codegen/commons"
+	"github.com/watercraft/go-raml/codegen/types"
+	"github.com/watercraft/go-raml/raml"
 )
 
 func GenerateCapnp(apiDef *raml.APIDefinition, dir, lang, pkg string) error {
