@@ -45,7 +45,6 @@ import (
 
 	log "github.com/sirupsen/logrus"
 	"github.com/gigforks/yaml"
-	"github.com/kr/pretty"
 )
 
 var (
@@ -113,7 +112,7 @@ func ParseReadFile(workDir, fileName string, root Root) ([]byte, error) {
 	}
 
 	if log.GetLevel() == log.DebugLevel {
-		pretty.Println(string(preprocessedContentsBytes))
+		fmt.Println(string(preprocessedContentsBytes))
 	}
 
 	// Unmarshal into an APIDefinition value
