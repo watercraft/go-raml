@@ -8,7 +8,7 @@ import (
 	"github.com/watercraft/go-raml/commands"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/urfave/cli"
+	"github.com/watercraft/cli"
 )
 
 var (
