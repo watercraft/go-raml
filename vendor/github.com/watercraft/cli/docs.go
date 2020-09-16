@@ -7,8 +7,8 @@ import (
 	"sort"
 	"strings"
 	"text/template"
-
-	"github.com/watercraft/go-md2man"
+	// TODO: Fix dependancies
+	//"github.com/watercraft/go-md2man/md2man"
 )
 
 // ToMarkdown creates a markdown string for the `*App`
@@ -28,7 +28,9 @@ func (a *App) ToMan() (string, error) {
 	if err := a.writeDocTemplate(&w); err != nil {
 		return "", err
 	}
-	man := md2man.Render(w.Bytes())
+	// TODO: Fix dependancies
+	// man := md2man.Render(w.Bytes())
+	man := ""
 	return string(man), nil
 }
 

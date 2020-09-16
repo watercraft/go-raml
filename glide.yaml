@@ -1,4 +1,4 @@
-package: .
+package: github.com/watercraft/go-raml
 import:
 - package: github.com/chuckpreslar/inflect
 - package: github.com/gigforks/yaml
@@ -12,30 +12,7 @@ import:
 - package: github.com/volatiletech/inflect
   version: ^0.0.1
 - package: github.com/watercraft/cli
-  version: ^2.5.0
-- package: github.com/watercraft/go-raml
-  version: ^0.4.0
-  subpackages:
-  - codegen
-  - codegen/apidocs
-  - codegen/capnp
-  - codegen/commons
-  - codegen/date
-  - codegen/generator
-  - codegen/golang
-  - codegen/libraries
-  - codegen/nim
-  - codegen/python
-  - codegen/resource
-  - codegen/security
-  - codegen/tarantool
-  - codegen/templates
-  - codegen/types
-  - commands
-  - docs/tutorial/go/client/goramldir
-  - docs/tutorial/go/client/goramldir/goraml
-  - docs/tutorial/go/client/goramldir/types
-  - raml
+  version: ^2.7.0
 - package: github.com/watercraft/validator
 testImport:
 - package: github.com/smartystreets/goconvey

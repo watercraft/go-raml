@@ -1,5 +1,5 @@
-hash: 562441b773630dbad0fbfbf486e437844bf7e66cbac1b4cd0a8ca311d21519c2
-updated: 2020-09-15T11:43:16.327649076-07:00
+hash: c9c1c182b66eb3ffdcf5fb52a09ecc38c7c218f319c89c223336305a23ba9e09
+updated: 2020-09-16T09:15:16.057286732-07:00
 imports:
 - name: github.com/chuckpreslar/inflect
   version: 423e3ac59c611e2d549527ab8c15fb99335d30ba
@@ -23,37 +23,11 @@ imports:
 - name: github.com/volatiletech/inflect
   version: d8a15409218525655fee399863adef5b07cbdebd
 - name: github.com/watercraft/cli
-  version: 5e20420bd78d156986783251e760c60195bac64a
-- name: github.com/watercraft/go-md2man
-  version: bb19790c8b07db35a301caf6bc3bb20b495b4800
-- name: github.com/watercraft/go-raml
-  version: 6f465d872f62924b4cabf2beab0169744c7b5532
-  subpackages:
-  - codegen
-  - codegen/apidocs
-  - codegen/capnp
-  - codegen/commons
-  - codegen/date
-  - codegen/generator
-  - codegen/golang
-  - codegen/libraries
-  - codegen/nim
-  - codegen/python
-  - codegen/resource
-  - codegen/security
-  - codegen/tarantool
-  - codegen/templates
-  - codegen/types
-  - commands
-  - docs/tutorial/go/client/goramldir
-  - docs/tutorial/go/client/goramldir/goraml
-  - docs/tutorial/go/client/goramldir/types
-  - raml
-  - utils
+  version: 9691649366d1b8ba07f9c21df54139508c0345e2
 - name: github.com/watercraft/validator
   version: 0534b760150f6bb5410c9fa4c6bf15ae8144f5ad
 - name: golang.org/x/sys
-  version: 288bc346aa3906399979ee2fc63bacf4c43e04c9
+  version: dbad9cb7cb7ae8e5e3281f626a0a48c77f739a69
   subpackages:
   - internal/unsafeheader
   - unix

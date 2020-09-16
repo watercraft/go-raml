@@ -41,7 +41,7 @@ func main() {
 	log.SetFormatter(&log.TextFormatter{FullTimestamp: true})
 	var debugLogging bool
 	app.Flags = []cli.Flag{
-		cli.BoolFlag{
+		&cli.BoolFlag{
 			Name:        "debug, d",
 			Usage:       "Enable debug logging",
 			Destination: &debugLogging,
@@ -55,233 +55,247 @@ func main() {
 		}
 		return nil
 	}
-	app.Commands = []cli.Command{
-		{
+	app.Commands = []*cli.Command{
+		&cli.Command{
 			Name:  "server",
 			Usage: "Generate a server according to a RAML specification",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "language, l",
 					Value:       "go",
 					Usage:       "Language to construct a server for",
 					Destination: &serverCommand.Language,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "kind",
 					Value:       "",
 					Usage:       "Kind of server to generate (, sanic)",
 					Destination: &serverCommand.Kind,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "dir",
 					Value:       ".",
 					Usage:       "target directory",
 					Destination: &serverCommand.Dir,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "ramlfile",
 					Value:       ".",
 					Usage:       "Source raml file",
 					Destination: &serverCommand.RamlFile,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "package",
 					Value:       "main",
 					Usage:       "package name",
 					Destination: &serverCommand.PackageName,
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:        "no-main",
 					Usage:       "Do not generate a main.go file",
 					Destination: &serverCommand.NoMainGeneration,
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:        "no-apidocs",
 					Usage:       "Do not generate API Docs in /apidocs/ endpoint",
 					Destination: &serverCommand.NoAPIDocs,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "import-path",
 					Value:       "",
 					Usage:       "import path of the generated code. Set automatically if target dir under $GOPATH",
 					Destination: &serverCommand.ImportPath,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "lib-root-urls",
 					Usage:       "Array of libraries root URLs",
 					Destination: &serverCommand.LibRootURLs,
 				},
 			},
-			Action: func(c *cli.Context) {
+			Action: func(c *cli.Context) error {
 				if err := serverCommand.Execute(); err != nil {
 					log.Error(err)
+					return err
 				}
+				return nil
 			},
 		},
-		{
+		&cli.Command{
 			Name:  "client",
 			Usage: "Create a client for a RAML specification",
 
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "language, l",
 					Value:       "go",
 					Usage:       "Language to construct a client for",
 					Destination: &clientCommand.Language,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "dir",
 					Value:       ".",
 					Usage:       "target directory",
 					Destination: &clientCommand.Dir,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "ramlfile",
 					Value:       ".",
 					Usage:       "Source raml file",
 					Destination: &clientCommand.RamlFile,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "package",
 					Value:       "client",
 					Usage:       "package name",
 					Destination: &clientCommand.PackageName,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "import-path",
 					Value:       "",
 					Usage:       "golang import path of the generated code",
 					Destination: &clientCommand.ImportPath,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "kind",
 					Value:       "requests",
 					Usage:       "Kind of python client to generate (requests,aiohttp)",
 					Destination: &clientCommand.Kind,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "lib-root-urls",
 					Usage:       "Array of libraries root URLs",
 					Destination: &clientCommand.LibRootURLs,
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:        "python-unmarshall-response",
 					Usage:       "set to true for python client to unmarshall the response into python class",
 					Destination: &clientCommand.PythonUnmarshallResponse,
 				},
 			},
-			Action: func(c *cli.Context) {
+			Action: func(c *cli.Context) error {
 				if err := clientCommand.Execute(); err != nil {
 					log.Error(err)
+					return err
 				}
+				return nil
 			},
 		},
-		{
+		&cli.Command{
 			Name:  "docs",
 			Usage: "Generate API docs for a RAML specifications",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "format",
 					Value:       "markdown",
 					Usage:       "API documentation format, only markdown is supported at the moment.",
 					Destination: &docsCommand.Format,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "ramlfile",
 					Value:       ".",
 					Usage:       "Source raml file",
 					Destination: &docsCommand.RamlFile,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "output",
 					Usage:       "Destination doc file",
 					Destination: &docsCommand.OutputFile,
 				},
 			},
-			Action: func(c *cli.Context) {
+			Action: func(c *cli.Context) error {
 				if err := docsCommand.Execute(); err != nil {
 					log.Error(err)
+					return err
 				}
+				return nil
 			},
 		},
-		{
+		&cli.Command{
 			Name:  "spec",
 			Usage: "Generate a RAML specification from a go server",
-			Action: func(c *cli.Context) {
+			Action: func(c *cli.Context) error {
 				err := errors.New("Not implemented, check the roadmap")
 				log.Error(err)
+				return err
 			},
-		}, {
+		},
+		&cli.Command{
 			Name:  "python-capnp",
 			Usage: "Create python classes for raml types with capnp conversion",
 
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "dir",
 					Value:       ".",
 					Usage:       "target directory",
 					Destination: &pythonCapnpCommand.Dir,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "ramlfile",
 					Value:       ".",
 					Usage:       "Source raml file",
 					Destination: &pythonCapnpCommand.RAMLFile,
 				},
 			},
-			Action: func(c *cli.Context) {
+			Action: func(c *cli.Context) error {
 				if err := pythonCapnpCommand.Execute(); err != nil {
 					log.Error(err)
+					return err
 				}
+				return nil
 			},
 		},
-		{
+		&cli.Command{
 			Name:  "capnp",
 			Usage: "Create capnpn models",
 
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "dir",
 					Value:       ".",
 					Usage:       "target directory",
 					Destination: &capnpCommand.Dir,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "ramlfile",
 					Value:       ".",
 					Usage:       "Source raml file",
 					Destination: &capnpCommand.RAMLFile,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "language, l",
 					Value:       "plain",
 					Usage:       "Language to construct capnpn models for",
 					Destination: &capnpCommand.Language,
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:        "package",
 					Value:       "main",
 					Usage:       "package name - only for Go",
 					Destination: &capnpCommand.Package,
 				},
 			},
-			Action: func(c *cli.Context) {
+			Action: func(c *cli.Context) error {
 				if err := capnpCommand.Execute(); err != nil {
 					log.Error(err)
 				}
+				return nil
 			},
-		}, {
+		},
+		&cli.Command{
 			Name:  "spec",
 			Usage: "Generate a RAML specification from a go server",
-			Action: func(c *cli.Context) {
+			Action: func(c *cli.Context) error {
 				err := errors.New("Not implemented, check the roadmap")
 				log.Error(err)
+				return err
 			},
 		},
 	}
 
-	app.Action = func(c *cli.Context) {
+	app.Action = func(c *cli.Context) error {
 		cli.ShowAppHelp(c)
+		return nil
 	}
 
 	if err := app.Run(os.Args); err != nil {
