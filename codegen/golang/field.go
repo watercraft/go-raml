@@ -67,7 +67,7 @@ func (fd fieldDef) Type() string {
 	elems := strings.Split(fd.fieldType, ".")
 
 	// import goraml or json package
-	if elems[0] == "goraml" || elems[0] == "json" {
+	if elems[0] == "goraml" || elems[0] == "json" || elems[0] == "[]json" {
 		return fd.fieldType
 	}
 
